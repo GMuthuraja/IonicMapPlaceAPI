@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Map
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Enter Latitude & Longiture in the below input box and press 'View on Map'.
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col size="12">
+          <ion-input type="tel" [(ngModel)]="latitude">
+          </ion-input>
+        </ion-col>
+        <ion-col size="12">
+          <ion-input type="tel" [(ngModel)]="longitude">
+          </ion-input>
+        </ion-col>
+        <ion-col size="12">
+          <ion-button [disabled]="!latitude || !longitude" expand="block" fill="solid" (click)="onDefaultSubmit()">View
+            on Map
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Enter any keywords in the below input box and press and press 'View on
+        Map'.
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col size="12">
+          <ion-input type="text" [(ngModel)]="placename"></ion-input>
+        </ion-col>
+        <ion-col size="12">
+          <ion-button [disabled]="!placename" expand="block" fill="solid" (click)="onPlaceSubmit()">View on Map
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
