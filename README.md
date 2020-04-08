@@ -1,1 +1,1 @@
-# IonicMapPlaceAPIgit init 
+# IonicMapPlaceAPI 
